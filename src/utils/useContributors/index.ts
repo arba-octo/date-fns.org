@@ -5,14 +5,14 @@ import { CONFIG } from "~/constants";
 const CONTRIBUTORS_URL = `${CONFIG.apiURL}/contributors`;
 
 export type ContributorsFetchResponse = {
-  id: number;
+  id: string;
   html_url: string;
   avatar_url: string;
   login: string;
 }[];
 
 interface Contributor {
-  id: number;
+  id: string;
   url: string;
   avatarUrl: string;
   name: string;

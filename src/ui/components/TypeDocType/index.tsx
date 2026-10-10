@@ -150,8 +150,21 @@ export const TypeDocType: FunctionComponent<TypeDocTypeProps> = ({
         </>
       );
 
-    case "query":
     case "predicate":
+      return (
+        <>
+          {type.asserts && "asserts "}
+          {type.name}
+          {type.targetType && (
+            <>
+              {" is "}
+              <TypeDocType type={type.targetType} />
+            </>
+          )}
+        </>
+      );
+
+    case "query":
     case "inferred":
     case "unknown":
     case "templateLiteral":

@@ -153,7 +153,6 @@ export const TypeDocType: FunctionComponent<TypeDocTypeProps> = ({
     case "predicate":
       return (
         <>
-          {type.asserts && "asserts "}
           {type.name}
           {type.targetType && (
             <>
